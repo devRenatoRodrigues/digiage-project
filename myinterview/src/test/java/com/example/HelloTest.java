@@ -2,13 +2,10 @@ package com.example;
 
 import org.junit.Test;
 
-import com.example.Hello;
 
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
-
-import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
 /**
@@ -26,7 +23,8 @@ public class HelloTest {
 		Hello hi = new Hello();
 		hi.sayHello(stream);
 
-		assertThat(os.toString(), is(equalTo(Hello.HELLO + "\r\n")));
+		String goal = Hello.HELLO + "\n";
+		assertEquals(goal, os.toString());
 	}
 
 	@Test
@@ -39,8 +37,8 @@ public class HelloTest {
 		hi.sayHello(stream);
 
 		// Does it say "Hello!" three times?
-		String goal = Hello.HELLO + "\r\n" + Hello.HELLO + "\r\n" + Hello.HELLO + "\r\n";
-		assertThat(os.toString(), is(equalTo(goal)));
+		String goal = Hello.HELLO + "\n" + Hello.HELLO + "\n" + Hello.HELLO + "\n";
+		assertEquals(goal, os.toString());
 	}
 
 	@Test(expected = IllegalArgumentException.class)
