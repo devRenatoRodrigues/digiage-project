@@ -3,11 +3,6 @@ package com.example;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.StandardOutputStreamLog;
-
-import com.example.Hello;
-import com.example.HelloApp;
-
-import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
 /**
@@ -18,7 +13,7 @@ import static org.junit.Assert.*;
  * This integration test uses system-rules, an extension for JUnit that lets you test System.out and System.exit()
  * etc.:
  * <p/>
- * http://www.stefan-birkner.de/system-rules
+ * <a href="http://www.stefan-birkner.de/system-rules">...</a>
  */
 public class HelloWithTestsIT {
 
@@ -30,7 +25,9 @@ public class HelloWithTestsIT {
         String[] args = {"1"};
         HelloApp.main(args);
 
-        assertThat(out.getLog(), is(equalTo(Hello.HELLO + "\r\n")));
+        String goal = Hello.HELLO + "\n";
+
+        assertEquals(goal, out.getLog());
     }
 
     @Test
@@ -38,7 +35,7 @@ public class HelloWithTestsIT {
         String[] args = {"3"};
         HelloApp.main(args);
 
-        String thrice = Hello.HELLO + "\r\n" + Hello.HELLO + "\r\n" + Hello.HELLO + "\r\n";
-        assertThat(out.getLog(), is(equalTo(thrice)));
+        String thrice = Hello.HELLO + "\n" + Hello.HELLO + "\n" + Hello.HELLO + "\n";
+        assertEquals(thrice, out.getLog());
     }
 }
