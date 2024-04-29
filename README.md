@@ -1,3 +1,22 @@
+## How to use
+```bash
+mvn clean && mvn install -DskipTests
+```
+```bash
+mvn spring-boot:run
+```
+ Aqui tem as configurações de porta do seu local host que pode ser editado para a API !
+![Change Port](https://github.com/devRenatoRodrigues/digiage-project/assets/115325126/ce047a50-8d4c-4c63-9900-8de11bbc573d)
+
+Temos uma API CRUD básica
+![Create](https://github.com/devRenatoRodrigues/digiage-project/assets/115325126/5b97bcc1-ee02-4ce3-9982-ae5bb3e0e4b0)
+![Read](https://github.com/devRenatoRodrigues/digiage-project/assets/115325126/90e6310a-3a47-4537-8e3d-95df31994503)
+![Update](https://github.com/devRenatoRodrigues/digiage-project/assets/115325126/01b9ced1-a75b-4e0c-9492-fb69220e3944)
+![Delete](https://github.com/devRenatoRodrigues/digiage-project/assets/115325126/001a5291-ba83-4694-940a-0afc1a73153f)
+
+
+
+
 ## About me
 Em busca de um sonho!
 
